@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --Dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--Dark-cyan);
+  background-image: url("./images/bg-pattern-top.svg"),
+    url("./images/bg-pattern-bottom.svg");
+  background-position: top -300px left -300px, bottom -300px right -300px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  display: grid;
+  place-content: center;
+}
+
+article {
+  width: 80%;
+  max-width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.img-background {
+  width: 100%;
+  height: 140px;
+  background-image: url("./images/bg-pattern-card.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  aspect-ratio: 5/1;
+}
+.img-background img {
+  position: relative;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.profile-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.profile-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--Very-dark-desaturated-blue);
+  margin-bottom: 5px;
+}
+.profile-name span {
+  margin-left: 5px;
+  font-weight: 400;
+  color: var(--Dark-gray);
+}
+.profile-city {
+  font-size: 0.9rem;
+  color: var(--Dark-gray);
+}
+.profile-stats {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.stats {
+  font-weight: 700;
+  color: var(--Very-dark-desaturated-blue);
+}
+
+.profile-stats p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--Dark-gray);
+}
+.stats-text {
+  font-size: 0.8rem;
+}
+
+/* large tablet & laptop styles */
+@media screen and (min-width: 960px) {
+  body {
+    background-position: top 100% left -700px, bottom 150% right -500px;
+  }
+}
